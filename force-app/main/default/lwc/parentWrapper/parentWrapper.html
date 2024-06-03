@@ -1,0 +1,12 @@
+<template>
+ <lightning-card title="Album List">
+    <lightning-button label="See Albums" onclick={fetchAlbums}></lightning-button>
+    <div class="album-wrapper">
+        <template if:true={albums}>
+            <template for:each={albums} for:item="album">
+                <c-single-tile key={album.id} album={album}></c-single-tile>
+            </template>
+        </template>
+    </div>
+ </lightning-card>   
+</template>
